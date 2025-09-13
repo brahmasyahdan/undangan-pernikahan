@@ -8,17 +8,34 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="google" content="notranslate" />
         <meta name="robots" content="noindex" />
+        <script>
+            function openRSVPForm() {
+                document.getElementById('rsvp-form').style.display = 'block';
+            }
+            
+            function closeRSVPForm() {
+                document.getElementById('rsvp-form').style.display = 'none';
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                var modal = document.getElementById('rsvp-form');
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        </script>
         <title>Bhasri &amp; Fatimah</title>
         <meta name="title" content="Fatimah &amp; Bhasri" />
         <meta name="description" content="Tanpa Mengurangi Rasa Hormat. Kami Bermaksud Mengundang Bapak/Ibu/Saudara/i, Pada Acara Pernikahan Kami" />
-        <meta itemprop="image" content="images/Desain tanpa judul.svg" />
+        <meta itemprop="image" content="images/logo-nama.svg" />
         <link rel="icon" type="image/x-icon" href="https://assets.satumomen.com/images/media/281143-media-1713518723.png" />
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="" />
         <meta property="og:title" content="Bhasri &amp; Fatimah" />
         <meta property="og:description" content="Tanpa Mengurangi Rasa Hormat. Kami Bermaksud Mengundang Bapak/Ibu/Saudara/i, Pada Acara Pernikahan Kami" />
-        <meta property="og:image" content="images/Desain tanpa judul.svg" />
+        <meta property="og:image" content="images/logo-nama.svg" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -138,7 +155,7 @@
                                                             style="height: 150px; width: 150px; overflow: hidden; margin-bottom: 20px; border-radius: 10px;"
                                                             class="mx-auto image-editable animate__animated animate__fadeInDown animate__slower"
                                                         >
-                                                            <img src="images\Desain tanpa judul.svg" style="width: 100%; height: 100%; object-fit: contain;" alt="no-image.jpg" />
+                                                            <img src="images\logo-nama.svg" style="width: 100%; height: 100%; object-fit: contain;" alt="no-image.jpg" />
                                                         </div>
                                                         <div class="text-center animate__animated animate__fadeInUp animate__slower">
                                                             <div class="editable quotes mb-3" style="font-size: 10px;">
@@ -174,7 +191,7 @@
                                                             style="height: 230px; width: 100%; margin: auto; overflow: hidden; margin-bottom: 20px; border: 4px solid var(--inv-border); border-radius: 10px;"
                                                             class="image-editable animate__animated animate__fadeInDown animate__slower"
                                                         >
-                                                            <img class="mb-4" src="images\Desain tanpa judul.svg" style="width: 100%; height: 100%; object-fit: cover;" alt="no-image.jpg" />
+                                                            <img class="mb-4" src="images\logo-nama.svg" style="width: 100%; height: 100%; object-fit: cover;" alt="no-image.jpg" />
                                                         </div>
                                                         <div class="text-center animate__animated animate__fadeInUp animate__slower">
                                                             <div class="editable font-italic mb-3" style="font-size: 14px;">
@@ -312,7 +329,7 @@
                                                                     style="width: 100%; margin: auto; border-radius: 2rem; overflow: hidden; padding-bottom: 70%; position: relative; border: 2px solid var(--inv-base);"
                                                                 >
                                                                     <img
-                                                                        src="https://assets.satumomen.com/images/galleries/408252-gallery-TDAojIBdQR.png"
+                                                                        src="images/gambar-map.png"
                                                                         class="w-100 h-100"
                                                                         style="position: absolute; object-fit: cover;"
                                                                         alt="no-image.jpg"
@@ -358,7 +375,13 @@
                                                             </div>
 
                                                             <div class="editable mb-4 animate__animated animate__fadeInUp animate__slower">Tekan tombol dibawah ini untuk mengirim ucapan dan konfirmasi kehadiran</div>
-                                                            <button class="btn-rsvp btn btn-primary rounded-pill mb-4 animate__animated animate__fadeInUp animate__slow">Konfirmasi &amp; Kirim Ucapan</button>
+                                                            <button class="btn-rsvp btn btn-primary rounded-pill mb-4 animate__animated animate__fadeInUp animate__slow" onclick="openRSVPForm()">Konfirmasi &amp; Kirim Ucapan</button>
+                                                            <div id="rsvp-form" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+                                                                <div class="modal-content" style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 10px;">
+                                                                    <span class="close" onclick="closeRSVPForm()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                                                                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfa_ylzzDvktISnwz6-_8NSLJ3uRpa-KB3Dtd_ISMX3TP0tow/viewform?embedded=true" width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+                                                                </div>
+                                                            </div>
                                                             <div class="editable mb-4 animate__animated animate__fadeInUp animate__slower font-weight-bold" style="font-size: 14.4px;"></div>
                                                         </div>
                                                     </div>
@@ -764,7 +787,7 @@
             <div class="modal fade" id="qrModal" tabindex="-1" role="dialog" aria-labelledby="qrModal" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content" style="height: 100%;">
-                        <div style="width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; background-image: url(images/Desain tanpa judul.svg);"></div>
+                        <div style="width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; background-image: url(images/logo-nama.svg);"></div>
                         <div class="text-center py-4 px-4">
                             <div>
                                 <div class="mx-auto">
@@ -805,14 +828,16 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content p-4" style="height: 100%;">
                         <!-- rsvp form -->
-                        <rsvp-component
-                            :lang='{"invitation_code":"Kode Undangan","validate_code":"Validasi Kode Undangan","name":"Nama","group_name":"Nama Grup","phone":"No Hp \/ WhatsApp","attendance":"Kehadiran?","yes":"Hadir","no":"Tidak Hadir","guest":"Orang","guest_count":"Jumlah Tamu","comment":"Komentar atau Ucapan","send":"Kirim","update":"Kirim","captcha_placeholder":"Ketik Text"}'
-                            :invitation_id="408252"
-                            name=""
-                            code=""
-                            :replace="true"
-                            overlay="1"
-                        ></rsvp-component>
+                        <div style="width: 100%; height: 80vh;">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfa_ylzzDvktISnwz6-_8NSLJ3uRpa-KB3Dtd_ISMX3TP0tow/viewform?embedded=true" 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0">
+                                Memuat…
+                            </iframe>
+                        </div>
                         <!-- rsvp form -->
                         <button onclick="closeModal(rsvpModal)" type="button" class="btn btn-close">
                             <svg xmlns="http://www.w3.org/2000/svg" height="42px" width="42px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
