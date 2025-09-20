@@ -36,13 +36,21 @@ guest_list = [
     "Mrs. Putri Maharani",
     "Eko",
     "Mas Fikri",
-    "Mbak Miftah"
+    "Mbak Miftah",
+    "Mrs. Nikita"
 ]
 
 def create_filename(name):
     # Membuat filename yang aman untuk URL
     # Menghapus spasi berlebih dan mengubah ke lowercase
-    return name.strip().lower().replace(' ', '-')
+    # Mengganti titik dengan tanda hubung
+    filename = name.strip().lower()
+    filename = filename.replace('.', '-')  # Mengganti titik dengan tanda hubung
+    filename = filename.replace(' ', '-')  # Mengganti spasi dengan tanda hubung
+    # Menghapus tanda hubung ganda jika ada
+    while '--' in filename:
+        filename = filename.replace('--', '-')
+    return filename
 
 def create_invitation(guest_name):
     # Baca template HTML
@@ -85,10 +93,23 @@ def main():
     print("----------------------------")
     for guest in guest_list:
         filename = create_filename(guest)
-        message = f"Assalamualaikum Wr. Wb.\nKepada Yth. {guest}\n\nTanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami.\n\nLink undangan: https://brahmasyahdan.github.io/undangan-pernikahan/{filename}.html"
+        
+        message = (
+            f"Assalamu’alaikum warahmatullahi wabarakatuh {guest} 🙏😊\n"
+            f"Bismillahirrahmanirrahim 🕌\n"
+            f"Alhamdulillah, dengan izin Allah SWT kami akan menempuh jalan baru dalam hidup kami 💍✨\n"
+            f"Dengan rendah hati kami mengundang {guest} untuk hadir dan memohon doa restu pada hari bahagia kami 🤲😊\n\n"
+            f"Link undangan digitalnya ada di bawah ini ya ⬇️\n"
+            f"https://brahmasyahdan.github.io/undangan-pernikahan/{filename}.html\n\n"
+            f"Barakallahu laka wa baraka ‘alaika wa jama‘a bainakuma fii khair 🤲✨ "
+            f"Semoga Allah memberkahi kami, {guest}, dan menyatukan kita dalam kebaikan 🌸\n\n"
+            f"Wassalamu’alaikum warahmatullahi wabarakatuh 🙏😊"
+        )
+        
         print(f"\nUntuk {guest}:")
         print(message)
         print("----------------------------")
+
 
 if __name__ == "__main__":
     main()
