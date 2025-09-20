@@ -22,7 +22,7 @@ guest_list = [
     "Mrs. Anggun",
     "Mrs. Indah",
     "Mbak Elok",
-    "Mr. AJI",
+    "Mr. Aji",
     "Mr. Ricki",
     "Mrs. Syan",
     "Mrs. Mayang",
@@ -35,7 +35,8 @@ guest_list = [
     "Mrs. Nindi",
     "Mrs. Putri Maharani",
     "Eko",
-    "Mas Fikri"
+    "Mas Fikri",
+    "Mbak Miftah"
 ]
 
 def create_filename(name):
